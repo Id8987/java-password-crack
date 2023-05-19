@@ -1,9 +1,13 @@
 public class PasswordCracker{
     public static void main(String[] args) {
+        
         PasswordCrackerFactory pwdFactory = new PasswordCrackerFactory();
         PasswordInterface fb = pwdFactory.decryptPassword("bruteforce");
-        //fb.findClearPassword("abc");
+        String hash = Md5.getMD5Hash("pass");
+        //fb.findClearPassword("anta");
+        fb.findHashedPassword(hash);
         PasswordInterface dic = pwdFactory.decryptPassword("");
-        dic.findClearPassword("soxnaAnta");
+        //dic.findHashedPassword(hash);
+        //dic.findClearPassword("soxnaAnta");
     }
 }

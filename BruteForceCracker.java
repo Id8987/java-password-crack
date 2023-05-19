@@ -20,7 +20,7 @@ public class BruteForceCracker implements PasswordInterface {
     }
     @Override
     public  String findHashedPassword(String passwordAdeviner) {
-        List<String> combinaisons = CombinaisonsCaracteres.genererCombinaisons(3); // Spécifiez la longueur souhaitée ici
+        List<String> combinaisons = CombinaisonsCaracteres.genererCombinaisons(4); // Spécifiez la longueur souhaitée ici
         String motCible = passwordAdeviner; //"900150983cd24fb0d6963f7d28e17f72"; // Le mot cible haché avec MD5
         String findedPassword = "";
         boolean correspondanceTrouvee = false;
@@ -55,7 +55,7 @@ public class BruteForceCracker implements PasswordInterface {
 
     @Override
     public String findClearPassword( String passwordADeviner) {
-        List<String> combinaisons = CombinaisonsCaracteres.genererCombinaisons(3); // Spécifiez la longueur souhaitée ici
+        List<String> combinaisons = CombinaisonsCaracteres.genererCombinaisons(4); // Spécifiez la longueur souhaitée ici
         String motCible = passwordADeviner; // Le mot à rechercher
         
         boolean correspondanceTrouvee = false;
