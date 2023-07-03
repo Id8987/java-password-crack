@@ -115,7 +115,7 @@ public class DictionnaryCracker implements PasswordInterface {
             File dictionnaire = new File("1000000-password-seclists.txt");
             Scanner reader = new Scanner(dictionnaire);
             while(reader.hasNextLine()){
-                String testedWith = reader.nextLine();
+                String testedWith = reader.nextLine() ;
                 System.out.println("Comparaison avec : " + testedWith + ", Hash MD5 : " + Md5.getMD5Hash(testedWith));
                 if(motDePasseADeviner.equals(Md5.getMD5Hash(testedWith))){
                     password = testedWith;

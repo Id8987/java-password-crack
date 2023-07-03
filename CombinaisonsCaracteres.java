@@ -14,7 +14,7 @@ class CombinaisonsCaracteres {
     private static void genererCombinaisonsRecursif(String combinaisonActuelle, int longueur, List<String> combinaisons) {
         // Condition de sortie de la récursivité : la combinaison a atteint la longueur souhaitée
         if (combinaisonActuelle.length() == longueur) {
-            combinaisons.add(combinaisonActuelle);
+            combinaisons.add(combinaisonActuelle) ;
             return;
         }
         

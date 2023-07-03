@@ -11,7 +11,7 @@ public class Md5 {
             String hashText = no.toString(16);
 
             while (hashText.length() < 32) {
-                hashText = "0" + hashText;
+                hashText = "0" + hashText ;
             }
 
             return hashText;

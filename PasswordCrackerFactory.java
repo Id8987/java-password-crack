@@ -3,7 +3,7 @@ public class PasswordCrackerFactory {
         if(methode.equals("bruteforce")){
             return new BruteForceCracker();
         }else{
-            return new DictionnaryCracker();
+            return new DictionnaryCracker() ;
         }
     }
 }

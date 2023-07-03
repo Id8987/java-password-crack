@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BruteForceCracker implements PasswordInterface {
     public static void main(String[] args) {
-        BruteForceCracker bf = new BruteForceCracker();
+        BruteForceCracker bf = new BruteForceCracker() ;
         bf.findPassword("zzs");
     }
     public void findPassword(String mot){
