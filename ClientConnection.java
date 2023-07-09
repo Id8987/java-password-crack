@@ -14,15 +14,21 @@ public class ClientConnection {
             // entrees utilisateur
             Scanner scanner = new Scanner(System.in);
            
+            System.out.println("Entrer le hash");
+            String hash = scanner.nextLine();
 
             System.out.println("Veuillez choisir une methode pour le hack");
             System.out.println("1 pour brute-force");
             System.out.println("2 pour dictionnaire");
             int methodChoice = scanner.nextInt();
+           
+
+            
 
             // envoie le choix de la methode au server
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             
+            out.println(hash);
             out.println(methodChoice);
 
             // recevoir la reponse du serveur

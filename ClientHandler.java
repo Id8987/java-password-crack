@@ -21,19 +21,21 @@ public class ClientHandler implements Runnable {
             String serverPassword = "pass";
 
             
-            String choice = reader.readLine();       
+            String hash = reader.readLine(); 
+            String choice = reader.readLine();      
 
+            
             // // Utiliser la méthode de crack de mot de passe appropriée en fonction du choix du client
             PasswordCrackerFactory pwdFactory = new PasswordCrackerFactory();
 
             if(choice.equals("1")){
                 PasswordInterface bruteForceCracker = pwdFactory.decryptPassword("bruteforce");
-                String bruteForceResult = bruteForceCracker.findClearPassword(serverPassword);
+                String bruteForceResult = bruteForceCracker.findHashedPassword(hash);
                 writer.println("Brute Force Result: " + bruteForceResult);
 
             }else if(choice.equals("2")){
                 PasswordInterface dictionaryCracker = pwdFactory.decryptPassword("");
-                String dictionaryResult = dictionaryCracker.findClearPassword(serverPassword);
+                String dictionaryResult = dictionaryCracker.findHashedPassword(hash);
                 writer.println("Dictionary Result: " + dictionaryResult);
                 
             }else{

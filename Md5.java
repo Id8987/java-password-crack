@@ -3,6 +3,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Md5 {
+    public static void main(String[] args) {
+        System.out.println(Md5.getMD5Hash("abcd"));
+    }
     public static  String getMD5Hash(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
